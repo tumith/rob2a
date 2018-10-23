@@ -10,36 +10,11 @@
 #include "mytasks.c"
 task main()
 {
-	StartTask(one);
+	StartTask(one,7);
 	StartTask(two);
 	StartTask(three);
 	StartTask(four);
 	while(true){
-		int number = rand()%4;
-		if(number ==1){
-			StartTask(one);
-			StopTask(two);
-			StopTask(three);
-			StopTask(four);
-		}
-		if(number ==2){
-			StartTask(two);
-			StartTask(three);
-			StopTask(four);
-		}
-		if(number ==3){
-			StartTask(three);
-			StopTask(four);
-			StopTask(two);
-			StopTask(one);
 
-		}
-		else{
-			StopTask(four);
-			StopTask(three);
-			StopTask(two);
-			StopTask(one);
-			wait1Msec(1000);
-		}
 	}
 }

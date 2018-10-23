@@ -19,8 +19,14 @@ task main()
 	}
 	Cords *ptr = &r;
 	for(int k=0;k<10;k++){
-	writeDebugStream(" (x,y):%d,%d,%c,%f",ptr->row,ptr->col,ptr->letter1,ptr->number);
+	writeDebugStream(" (x,y):%d,%d,%c,%f \n",ptr->row,ptr->col,ptr->letter1,ptr->number);
 	*ptr++;
 	}
+	*ptr--
+	for(int k=10;k>0;k--){
+	writeDebugStream(" (x,y):%d,%d,%c,%f \n",ptr->row,ptr->col,ptr->letter1,ptr->number);
+	*ptr--;
+	}
 	ptr = NULL;
+	writeDebugStream("%d",(int)'a');
 }
