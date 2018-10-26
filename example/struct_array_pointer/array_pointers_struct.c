@@ -39,30 +39,38 @@ Cords *set_cords(){
 	return &r;
 
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1a615dcd44f16428de78fed5dc0e7573befe5497
 bool drive(int x,int y,bool lr){
 	writeDebugStream("Keyri afram x:%d,y:%d%d\n", x,y,lr);
 	return lr;
 }
 
-task main()
-{
-	/*
-	Pointer  of type Cords that points to an array of Cords
-	*/
+//task main()
+//{
+//	/*
+//	Pointer  of type Cords that points to an array of Cords
+//	*/
 
-	Cords *ptr = set_cords();
-	int last_number;
-	int *last_pointer = &last_number;
-	//showing the path to the end of the grid
-	for(int i=0;i<30;i++){
-		if(ptr->tf){
-	writeDebugStream("Hnit %d%d%d\n",ptr->row,ptr->col,ptr->tf);
-	if(ptr->row %2==0){
-		last_number = ptr->row;
-	}
-	writeDebugStream("Last_Pointer %d\n",*last_pointer);
+//	Cords *ptr = set_cords();
+//	int last_number;
+//	int *last_pointer = &last_number;
+//	//showing the path to the end of the grid
+//	for(int i=0;i<30;i++){
+//		if(ptr->tf){
+//			writeDebugStream("Hnit %d%d%d\n",ptr->row,ptr->col,ptr->tf);
+//			if(ptr->row %2==0){
+//				last_number = ptr->row;
+//			}
+//			writeDebugStream("Last_Pointer %d\n",*last_pointer);
 
+//		}
+//		// make the pointer trawell throug  the array from one address to an other
+//		ptr++;
+
+<<<<<<< HEAD
 }
 // make the pointer trawell throug  the array from one address to an other
 ptr++;
@@ -80,6 +88,22 @@ void turn(bool left_right){
 	if(left_right){
 		writeDebugStream("Beygi til vinstri %d\n", left_right);
 	}
+=======
+//	}
+	//bool direction(int &x,int &y,Cords *ptr){
+	//	if(ptr-col - last_col==1){
+	//		return true;
+	//	}
+	//	else{
+	//		return false;
+	//	}
+	//}
+
+	void turn(bool left_right){
+		if(left_right){
+			writeDebugStream("Beygi til vinstri %d\n", left_right);
+		}
+>>>>>>> 1a615dcd44f16428de78fed5dc0e7573befe5497
 		else{
 			writeDebugStream("Beygi til haegri %d\n", left_right);
 		}

@@ -2,9 +2,8 @@ task driveMotors()
 {
 	while(true){
 		motor[rightMotor] = full_power;
-		motor[leftMotor]  = full_power;
+		motor[leftMotor]	= full_power;
 		writeDebugStream("Doing task driveMotors %d\n", full_power);
-
 	}
 }
 
@@ -12,9 +11,7 @@ task clawMotors()
 {
 	while(true){
 		motor[clawMotor] = full_power;
-		wait1Msec(200);
 		motor[clawMotor] = -full_power;
-		wait1Msec(200);
 		writeDebugStream("Doing task clawMotors%d\n", full_power);
 	}
 }
@@ -23,6 +20,7 @@ task one(){
 	{
 		writeDebugStream("Doing ONE :\n", 1);
 		writeDebugStream("Doing time %d:\n", time1[T1]);
+		abortTimeslice();// releasing cpu time so other task can do what they do :-)same affect as semaphore
 	}
 }
 task two(){
@@ -30,6 +28,7 @@ task two(){
 	{
 		writeDebugStream("Doing two :\n", 2);
 		writeDebugStream("Doing time %d:\n", time1[T2]);
+		abortTimeslice();
 	}
 }
 task three(){
@@ -37,6 +36,7 @@ task three(){
 	{
 		writeDebugStream("Doing three :\n", 3);
 		writeDebugStream("Doing time %d:\n", time1[T3]);
+		abortTimeslice();
 	}
 }
 task four(){
@@ -44,5 +44,6 @@ task four(){
 	{
 		writeDebugStream("Doing four :\n", 4);
 		writeDebugStream("Doing time %d:\n", time1[T4]);
+		abortTimeslice();
 	}
 }
