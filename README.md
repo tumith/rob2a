@@ -3,7 +3,7 @@
 Í áfanganum kynnast nemendur vélmennum, hvað er vélmenni og hvaða tækni er notuð . Nemendur kynnast  lausnaraðferðum, verkefnastjórnun, samvinnu og að nýta sér þá þekkingu í stærðfræði, eðlisfræði og forritun sem þeir hafa þegar vald á.  Eftirfarandi námsþættir verða kenndir: Niðurbrot vandamála úr flókinni  hegðun í einafalda hegðun (Behavior ) gerð flæðirita  og sauðakóða og að lokum forritun sem vélmenni skilur.  Hreyfing (fram,aftur,snúningur) tími og staða. Fjarstýringar (bylgjufræði) og nemar.
 
 ## Verkefnin:
-* [Verkefni 1](verkefni1/verkefni.md) Samsetning á vélmenni	10% 
+* [Verkefni 1](verkefni1/verkefni1.md) Samsetning á vélmenni	10% 
 * Verkefni 2	Færslur og snúningar	10%
 * Verkefni 3	Forrita fjarstýringu, sækja bolta 	10%
 * Verkefni 4	Keyra án þess að rekast á (Sónar) og light sensor	10%
