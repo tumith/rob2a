@@ -5,12 +5,12 @@
 ## Verkefnin:
 * [Verkefni 1](verkefni1/verkefni1.md) Samsetning á vélmenni	10% 
 * [Verkefni 2](verkefni2/verkefni2.md)	Færslur og snúningar	10%
-* Verkefni 3	Forrita fjarstýringu, sækja bolta 	10%
-* Verkefni 4	Keyra án þess að rekast á (Sónar) og light sensor	10%
-* Verkefni 5	Fylgja línu 	10%
-* Verkefni 6	Fylgja línu ,sækja bolta 0%
-* Verkefni 7	Lokaverkefni á tölvubraut	20%
-* Verkefni 8	Taka í sundur vélmenni og frágangur kistu (lykilmatsþáttur)	10%
+* [Verkefni 3](verkefni3/verkefni3.md)	Forrita fjarstýringu, sækja bolta 	10%
+* [Verkefni 4](verkefni4/verkefni4.md)	Keyra án þess að rekast á (Sónar) og light sensor	10%
+* [Verkefni 5](verkefni5/verkefni5.md)	Fylgja línu 	10%
+* [Verkefni 6](verkefni6/verkefni6.md)	Fylgja línu ,sækja bolta 0%
+* [Verkefni 7](verkefni7/verkefni7.md)	Lokaverkefni á tölvubraut	20%
+* [Verkefni 8](verkefni8/verkefni8.md)	Taka í sundur vélmenni og frágangur kistu (lykilmatsþáttur)	10%
 
 ### Námsefni frá VEX og Carnegie Mellon háskólanum
  http://cmra.rec.ri.cmu.edu/previews/robot_c_products/teaching_rc_cortex_v2/
