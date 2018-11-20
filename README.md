@@ -4,7 +4,7 @@
 
 ## Verkefnin:
 * [Verkefni 1](verkefni1/verkefni1.md) Samsetning á vélmenni	10% 
-* Verkefni 2](verkefni2/verkefni2.md)	Færslur og snúningar	10%
+* [Verkefni 2](verkefni2/verkefni2.md)	Færslur og snúningar	10%
 * Verkefni 3	Forrita fjarstýringu, sækja bolta 	10%
 * Verkefni 4	Keyra án þess að rekast á (Sónar) og light sensor	10%
 * Verkefni 5	Fylgja línu 	10%
