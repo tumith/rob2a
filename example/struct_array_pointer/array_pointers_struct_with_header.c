@@ -36,14 +36,6 @@ bool drive(int x,int y,bool lr){
 	writeDebugStream("Keyri afram x:%d,y:%d%d\n", x,y,lr);
 	return lr;
 }
-//bool direction(int &x,int &y,Cords *ptr){
-//	if(ptr-col - last_col==1){
-//		return true;
-//	}
-//	else{
-//		return false;
-//	}
-//}
 
 void turn(bool left_right){
 	if(left_right){
