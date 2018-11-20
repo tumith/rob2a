@@ -1,4 +1,4 @@
-# rob2a
+# ROBO2RG05AU
 vélmenni I grunnur með VEX
 ### Námsefni frá VEX og Carnegie Mellon háskólanum
  http://cmra.rec.ri.cmu.edu/previews/robot_c_products/teaching_rc_cortex_v2/
