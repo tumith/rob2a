@@ -1,4 +1,4 @@
-# Samsetning á vélmenni vægi 10% 
+# Samsetning á vélmenni vægi 15% 
 Munið að vinna saman og taka tillit til skoðanna hvors annars. 
 Það er algjört skilyrði að allur frágangur sé góður eftir hvern tíma þ.e er verkfæri fara á sinn stað í skápa og tösku.
 Farið á heimasíðu áfangans: [Námsefni áfangans](http://cmra.rec.ri.cmu.edu/previews/robot_c_products/teaching_rc_cortex_v2/).
