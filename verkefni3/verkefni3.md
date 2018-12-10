@@ -1,5 +1,5 @@
 # Verkefni 3
-## Forrita fjarstýringu  5% af loka einkunn
+## Forrita fjarstýringu  10% af loka einkunn
 ## 1.hluti 
 Forritið fjarstýringu þannig að annar snúður eða báðir virka til að færa róbot fram og aftur sem og snúa.  
 Forritið einnig tvo hnappa fyrir arm þ.e lyfta ,síga og opna / loka kló.
