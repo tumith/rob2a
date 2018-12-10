@@ -4,13 +4,13 @@ Hver hópur eða einstaklingur hannar sitt eigið lokaverkefni þ.e þraut sem v
 ## Ferlið og námsmatsþættir:
 1. Hanna og teikna þrautina 5 stig
 1. Gera lýsingu á verkefni 5 stig
-•	Skrá allar bjargi þ.e vélbúnað mótorar og sensorar sem er notaður  og eigindi þess (t.d analog/digital og parametrar) 3 stig
-•	Breyta vélmenni þannig að hann geti leyst þrautina 2 stig
-•	Gera sauðakóða 5 stig
-•	Gera flæðirit 5 stig
-•	Forrita og prófa (Kóði)50 stig
-•	Setja  allt í word eða LaTex skjal þ.e teikningar, mynd af vélmenni, sauðakóða og flæðirit 10 stig
-•	Video af vélmenni að leysa þraut. 5 stig
-•	Gera dagbók þ.e skrá daglega hvað og hver gerði hvað (git) 10 stig
+1. Skrá allar bjargi þ.e vélbúnað mótorar og sensorar sem er notaður  og eigindi þess (t.d analog/digital og parametrar) 3 stig
+1. Breyta vélmenni þannig að hann geti leyst þrautina 2 stig
+1. Gera sauðakóða 5 stig
+1. Gera flæðirit 5 stig
+1. Forrita og prófa (Kóði)50 stig
+1. Setja  allt í word eða LaTex skjal þ.e teikningar, mynd af vélmenni, sauðakóða og flæðirit 10 stig
+1. Video af vélmenni að leysa þraut. 5 stig
+1. Gera dagbók þ.e skrá daglega hvað og hver gerði hvað (git) 10 stig
 Skil: Skýrsla og slóð í video
 Gangi ykkur vel
