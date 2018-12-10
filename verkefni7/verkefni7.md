@@ -1,5 +1,5 @@
 # Verkefni 7 
-## Lokaverkefni 20% af lokaeinkunn
+## Lokaverkefni 10% af lokaeinkunn
 Hver hópur eða einstaklingur hannar sitt eigið lokaverkefni þ.e þraut sem vélmennið leysir, þrautin má vera staðbundin  þ.e vélmennið hreyfist ekki úr stað eða er innan borðsins sem er sér hannað fyrir vélmennin okkar.  Þið megið  breyta vélmenninu frá því sem nú er en þó þannig að ekki verði fleiri en 4 – 5 mótorar en sömu skynjarar. Einnig má gera verkefni með Arduino og Rasberry pi3
 ## Ferlið og námsmatsþættir:
 1. Hanna og teikna þrautina 5 stig
