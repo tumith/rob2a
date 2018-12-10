@@ -12,5 +12,7 @@ Hver hópur eða einstaklingur hannar sitt eigið lokaverkefni þ.e þraut sem v
 1. Setja  allt í word eða LaTex skjal þ.e teikningar, mynd af vélmenni, sauðakóða og flæðirit 10 stig
 1. Video af vélmenni að leysa þraut. 5 stig
 1. Gera dagbók þ.e skrá daglega hvað og hver gerði hvað (git) 10 stig.
+
 Skil: Skýrsla og slóð í video.
+
 Gangi ykkur vel
