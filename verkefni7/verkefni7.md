@@ -9,7 +9,7 @@ Hver hópur eða einstaklingur hannar sitt eigið lokaverkefni þ.e þraut sem v
 1. Gera sauðakóða 5 stig
 1. Gera flæðirit 5 stig
 1. Forrita og prófa (Kóði)50 stig
-1. Setja  allt í word eða LaTex skjal þ.e teikningar, mynd af vélmenni, sauðakóða og flæðirit 10 stig
+1. Setja  allt í verkefni7.md skjal þ.e teikningar, mynd af vélmenni, sauðakóða og flæðirit 10 stig
 1. Video af vélmenni að leysa þraut. 5 stig
 1. Gera dagbók þ.e skrá daglega hvað og hver gerði hvað (git) 10 stig.
 
