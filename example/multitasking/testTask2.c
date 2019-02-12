@@ -8,13 +8,25 @@
 #include "../robheader/myconst.h"
 #include "../robfunctions/motorfunctions.c"
 #include "mytasks.c"
+
+
 task main()
 {
-	StartTask(one,7);
-	StartTask(two);
-	StartTask(three);
-	StartTask(four);
-	while(true){
 
+	StartTask(one,7);
+	//StartTask(two);
+	//StartTask(three);
+	//StartTask(four);
+
+	/*if(vexRT[Btn5U]){
+	StopTask(two);
+	}
+	if(vexRT[Btn6U]){
+	StopTask(three);
+	}
+	if(vexRT[Btn6D]){
+	StopTask(four);
+	}*/
+	while(vexRT[Btn5U]==0){
 	}
 }

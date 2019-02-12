@@ -39,10 +39,9 @@ Cords *set_cords(){
 	return &r;
 
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> 1a615dcd44f16428de78fed5dc0e7573befe5497
+
+
 bool drive(int x,int y,bool lr){
 	writeDebugStream("Keyri afram x:%d,y:%d%d\n", x,y,lr);
 	return lr;
@@ -70,8 +69,7 @@ bool drive(int x,int y,bool lr){
 //		// make the pointer trawell throug  the array from one address to an other
 //		ptr++;
 
-<<<<<<< HEAD
-}
+//}
 // make the pointer trawell throug  the array from one address to an other
 ptr++;
 }
@@ -88,7 +86,7 @@ void turn(bool left_right){
 	if(left_right){
 		writeDebugStream("Beygi til vinstri %d\n", left_right);
 	}
-=======
+
 //	}
 	//bool direction(int &x,int &y,Cords *ptr){
 	//	if(ptr-col - last_col==1){
@@ -103,7 +101,7 @@ void turn(bool left_right){
 		if(left_right){
 			writeDebugStream("Beygi til vinstri %d\n", left_right);
 		}
->>>>>>> 1a615dcd44f16428de78fed5dc0e7573befe5497
+
 		else{
 			writeDebugStream("Beygi til haegri %d\n", left_right);
 		}
