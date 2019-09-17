@@ -38,7 +38,7 @@
 // 620 er 90 gradur i begju
 //+++++++++++++++++++++++++++++++++++++++++++++| MAIN |+++++++++++++++++++++++++++++++++++++++++++++++
 #include "../include/header/movingForwardHeder.h"
-#include "../include/functions/myfunctions.inc";
+#include "../include/functions/myfunctions.c";
 bool b_f = true;
 
 task main()
