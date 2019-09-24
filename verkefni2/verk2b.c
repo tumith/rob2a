@@ -23,8 +23,12 @@ task main()
 	StartTask(display);
 	wait1Msec(2000);
 	for(int i = 1;i < 6;i++){
-		driveS(BASE_DIST,true);
-		driveS(BASE_DIST,false);
+		resetEncoder();
+		driveS(BASE_DIST*i,true);
+		resetEncoder();
+		stopMotors();
+		driveS(BASE_DIST*i,false);
+		stopMotors();
 
 	}
 //tekur ummal(31) deilir med vegalengd(50cm)og margfaldar med 360(heill hringur)
