@@ -17,16 +17,16 @@
 #include "../include/header/movingForwardHeder.h"
 #include "../include/functions/myfunctions.c";
 
+bool turn_array[14] = {0,1,1,0,0,1,0,0,1,0,0,1,1,0};
 task main()
 {
  wait1Msec(1000);        // Wait 2000 milliseconds before continuing.
 
-  for(int i = 1; i<4; i++)      // While 'i' is less than 4:
+	  for(int i = 0; i<14; i++)      // While 'i' is less than 4:
   {
-    driveC(BASE_DIST);
-  	//drivec(5);
+  	drivec();
     stopMotors();
-    TurnLeft(1.3);        // Call function 'TurnLeft(float)' and pass the float value '1.3' through.
+    Turn(90,turn_array[i]);        // Call function 'TurnLeft(float)' and pass the float value '1.3' through.
   }
 
 
