@@ -39,16 +39,13 @@
 |*    Sensor - Dgt 11         FruntButton          sensorTouch            Stoping the robot           *|
 \*----------------------------------------------------------------------------------------------------*/
 
+#include "..\include\header\movingForwardHeder.h"
 
 task main()
 {
-	// til ad stopa hljod
-	int threshold = 10;
-
-
   while(1 == 1)
   {
-  	if(abs(vexRT[Ch2]) > threshold)
+  	if(abs(vexRT[Ch2]) > THRESHOLD /*THRESHOLD stoppar hljod*/)
   	{
   			motor[RMotor] = vexRT[Ch2];
   	}
@@ -57,7 +54,7 @@ task main()
   		motor[RMotor] = 0
   	}
 
-		if(abs(vexRT[Ch3]) > threshold)
+		if(abs(vexRT[Ch3]) > THRESHOLD)
   	{
    	 		motor[LMotor] = vexRT[Ch3];
    	}
