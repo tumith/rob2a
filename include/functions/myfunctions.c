@@ -1,4 +1,19 @@
 
+//--------------------------------------------| verk 3 |---------------------------------------------
+
+task emergency_stop(){
+	while(true){
+		if (SensorValue[Frontbutton] == 1){
+			suspendTask(main);
+			wait1Msec(1000);
+			StartTask(main);
+		}
+	}
+}
+
+//----------------------------------------------------------------------------------------------------
+
+
 void driveS(int dist, bool b_f){
 	int dir = (b_f)? (1):(-1);
 	while(dist>abs(SensorValue[REncoder])){
@@ -18,28 +33,14 @@ void driveS(int dist, bool b_f){
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-void driveC(int dist){
-	while(dist>abs(SensorValue[REncoder])){
-		if(abs(SensorValue[REncoder]) == abs(SensorValue[LEncoder]))
-			{
-				motor[RMotor] = 80;
-				motor[LMotor] = 80;
-			}
-			else{
-				motor[RMotor] = 80;
-				motor[LMotor] = 80;
-			}
-	}
-}
-
 
 //--------------------------------------------| FORWARD |---------------------------------------------
-void drivec(int dist)
+void drivec()
 {
   SensorValue[REncoder] = 0;    /* Clear the encoders for    */
   SensorValue[LEncoder]  = 0;    /* consistancy and accuracy. */
 
-  while(SensorValue[REncoder] < dist * BASE_DIST && SensorValue[LEncoder] < dist *BASE_DIST)
+  while(abs(SensorValue[REncoder]) < BASE_DIST)
   {
     motor[RMotor] = 63;         /* Run both motors        */
     motor[LMotor]  = 63;         /* forward at half speed. */
@@ -49,17 +50,17 @@ void drivec(int dist)
 }
 //----------------------------------------------------------------------------------------------------
 
-//-------------------------------------------| TURN LEFT |--------------------------------------------
-void TurnLeft(float r)
+//-------------------------------------------| TURN |--------------------------------------------
+void Turn(int deg,bool right_left)
 {
   SensorValue[REncoder] = 0;    /* Clear the encoders for    */
   SensorValue[LEncoder]  = 0;    /* consistancy and accuracy. */
-
+	int dir =(right_left)?(1):(-1);
   // While the encoders have not yet met their goal: (left is compared negativly since it will in reverse)
-  while(SensorValue[REncoder] < (r * BASE_ROTATION) && SensorValue[LEncoder] > (-1 * r * BASE_ROTATION))
+  while(abs(SensorValue[REncoder]) < (deg * BASE_ROTATION) && abs(SensorValue[LEncoder]) < (deg * BASE_ROTATION))
   {
-    motor[RMotor] = 63;         // Run the right motor forward at half speed
-    motor[LMotor]  = -63;        // Run the left motor backward at half speed
+    motor[RMotor] = dir*63;         // Run the right motor forward at half speed
+    motor[LMotor]  = dir*-63;        // Run the left motor backward at half speed
   }
   motor[RMotor] = 0;            /* Stop both motors!  This is important so that each function          */
   motor[LMotor]  = 0;            /* can act independantly as a "chunk" of code, without any loose ends. */
