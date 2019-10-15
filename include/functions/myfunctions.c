@@ -1,16 +1,4 @@
 
-//--------------------------------------------| verk 3 |---------------------------------------------
-
-task emergency_stop(){
-	while(true){
-		if (SensorValue[Frontbutton] == 1){
-			suspendTask(main);
-			wait1Msec(1000);
-			StartTask(main);
-		}
-	}
-}
-
 //----------------------------------------------------------------------------------------------------
 
 
@@ -76,6 +64,8 @@ void resetEncoder(){
 void stopMotors(){
 	motor[LMotor] = 0;
 	motor[RMotor] = 0;
+	motor[Claw] = 0;
+	motor[CraneArm] = 0;
 	wait1Msec(1000);
 }
 
