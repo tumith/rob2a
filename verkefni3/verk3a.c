@@ -40,11 +40,16 @@
 \*----------------------------------------------------------------------------------------------------*/
 
 #include "..\include\header\movingForwardHeder.h"
+#include "..\include\functions\myfunctions.c"
 
 task main()
 {
   while(1 == 1)
   {
+  	StartTask(emergency_stop);
+  	StartTask(startBot);
+
+
   	if(abs(vexRT[Ch2]) > THRESHOLD /*THRESHOLD stoppar hljod*/)
   	{
   			motor[RMotor] = vexRT[Ch2];
@@ -98,4 +103,21 @@ task main()
     	motor[CraneArm] = 0;
     }
   }
+}
+
+task emergency_stop(){
+	while(true){
+		if (SensorValue(FruntButton) == 1 || vexRT[Btn7D] == 1){
+			suspendTask(main);
+			stopMotors();
+		}
+	}
+}
+
+task startBot(){
+	while(true){
+		if (vexRT[BTn7U] == 1){
+			StartTask(main);
+		}
+	}
 }
