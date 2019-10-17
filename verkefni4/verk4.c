@@ -36,10 +36,43 @@
 \*----------------------------------------------------------------------------------------------------*/
 
 #include "..\include\header\movingForwardHeder.h"
+#include "..\include\functions\myfunctions.c"
 
 task main()
 {
+	StartTask(emergency_stop);
+	StartTask(startBot);
+	while(true)
+	{
+		if(SensorValue(SonarCM) > 40)		// Loop while robot's Ultrasonic sensor is further than 20 inches away from an object
+		{                                                                         // || (or) it is '-1'.  (-1 is the value returned when nothing is in it's visable range)
+			motor[RMotor] = 63;			// Motor on port2 is run at half (63) power forward
+			motor[LMotor]  = 63;			// Motor on port3 is run at half (63) power forward
+		}
+		else if(SensorValue(SonarCM) == -1){
+			motor[RMotor] = 63;
+			motor[LMotor] = 63;
+		}
 
+		else {
+			stopMotors();
+		}
+	}
+}
 
+task emergencys_stop(){
+	while(true){
+		if (SensorValue(FruntButton) == 1){
+			suspendTask(main);
+			stopMotors();
+		}
+	}
+}
 
+task startBot(){
+	while(true){
+		if (vexRT[BTn7U] == 1){
+			StartTask(main);
+		}
+	}
 }
