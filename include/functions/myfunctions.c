@@ -1,3 +1,63 @@
+//-------------------------------Verk4---------------------------------------------------------------
+task joydrive()
+{
+	while(1 == 1)
+  {
+  	if(abs(vexRT[Ch2]) > THRESHOLD /*THRESHOLD stoppar hljod*/)
+  	{
+  			motor[RMotor] = vexRT[Ch2];
+  	}
+  	else
+  	{
+  		motor[RMotor] = 0
+  	}
+
+		if(abs(vexRT[Ch3]) > THRESHOLD)
+  	{
+   	 		motor[LMotor] = vexRT[Ch3];
+   	}
+   	else
+  	{
+  		motor[LMotor] = 0
+  	}
+
+    if(sensorValue[FruntButton] == 1)
+    {
+    	motor[LMotor] = 0;
+    	motor[RMotor] = 0;
+    }
+
+   //Claw
+    if(vexRT[Btn8L] == 1)
+    {
+    	motor[Claw] = 47;
+    }
+    else if(vexRT[Btn8R] == 1)
+    {
+    	motor[Claw] = -47;
+    }
+
+    else
+    {
+    	motor[Claw] = 0;
+    }
+
+    // craneArm
+    if(vexRT[Btn8U] == 1)
+    {
+    	motor[CraneArm] = -50;
+    }
+    else if(vexRT[Btn8D] == 1)
+    {
+    	motor[CraneArm] = 50;
+  	}
+    else
+    {
+    	motor[CraneArm] = 0;
+    }
+  }
+}
+
 
 //----------------------------------------------------------------------------------------------------
 
