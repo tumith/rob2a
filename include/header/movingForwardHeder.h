@@ -6,3 +6,4 @@ const int THRESHOLD = 10;
 task emergency_stop();
 task startBot();
 task joydrive();
+task main();

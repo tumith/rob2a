@@ -58,7 +58,23 @@ task joydrive()
   }
 }
 
+task emergencys_stop(){
+	clearDebugStream();
+	while(true){
+		if (SensorValue(FruntButton) == 1 || vexRT[Btn7D] == 1){
+			suspendTask(main);
+			stopMotors();
+		}
+	}
+}
 
+task startBot(){
+	while(true){
+		if (vexRT[BTn7U] == 1){
+			StartTask(main);
+		}
+	}
+}
 //----------------------------------------------------------------------------------------------------
 
 
