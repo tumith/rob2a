@@ -45,25 +45,20 @@
 
 task main()
 {
-	//StartTask(emergency_stop);
+	StartTask(emergency_stop);
 	StartTask(startBot);
 	while(true)
 	{
-		if (vexRT[Btn7L] == 1){
-			bool x = true;
-			while(x == true){
+		//if (vexRT[Btn7L] == 1){
+			while(true){
 				if(SensorValue(LightSensor) < 900){
-					if(SensorValue(SonarCM) > 40)		// Loop while robot's Ultrasonic sensor is further than 20 inches away from an object
+					if(SensorValue(SonarCM) > 30 || SensorValue(SonarCM) == -1)		// Loop while robot's Ultrasonic sensor is further than 20 inches away from an object
 					{                                                                         // || (or) it is '-1'.  (-1 is the value returned when nothing is in it's visable range)
 						motor[RMotor] = 63;			// Motor on port2 is run at half (63) power forward
 						motor[LMotor]  = 63;			// Motor on port3 is run at half (63) power forward
 					}
-					else if(SensorValue(SonarCM) == -1){
-						motor[RMotor] = 63;
-						motor[LMotor] = 63;
-					}
 
-					if(SensorValue(SonarCM) < 40)
+					else if(SensorValue(SonarCM) < 30)
 					{
 						stopMotors();
 						motor[RMotor] = 63;
@@ -76,6 +71,15 @@ task main()
 					motor[LMotor] = 0;
 				}
 			}
+		//}
+	}
+}
+
+task emergencys_stop(){
+	while(true){
+		if (SensorValue(FruntButton) == 1 || vexRT[Btn7D] == 1){
+			suspendTask(main);
+			stopMotors();
 		}
 	}
 }
