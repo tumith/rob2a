@@ -114,10 +114,10 @@ task emergency_stop(){
 	}
 }
 
-task startBot(){
+/*task startBot(){
 	while(true){
 		if (vexRT[BTn7U] == 1){
 			StartTask(main);
 		}
 	}
-}
+}*/
