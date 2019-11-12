@@ -1,72 +1,108 @@
-//-------------------------------Verk4---------------------------------------------------------------
-task joydrive()
+//-------------------------------Verk5---------------------------------------------------------------
+void drive_line(int speed)
 {
-	while(1 == 1)
-  {
-  	if(abs(vexRT[Ch2]) > THRESHOLD /*THRESHOLD stoppar hljod*/)
-  	{
-  			motor[RMotor] = vexRT[Ch2];
-  	}
-  	else
-  	{
-  		motor[RMotor] = 0
-  	}
+	while(true)
+	{
+		// CENTER sensor sees dark:
+    if(SensorValue(LineFollow2) > THRESHOLD)
+    {
+      // go straight
+      motor[LMotor] = speed;
+      motor[RMotor] = speed;
+    }
+ 		// RIGHT sensor sees dark:
+    else if(SensorValue(LineFollow1) > THRESHOLD)
+    {
+      // counter-steer right:
+      motor[LMotor] = speed;
+      motor[RMotor] = 0;
+    }
 
-		if(abs(vexRT[Ch3]) > THRESHOLD)
-  	{
-   	 		motor[LMotor] = vexRT[Ch3];
-   	}
-   	else
-  	{
-  		motor[LMotor] = 0
-  	}
-
-    if(sensorValue[FruntButton] == 1)
+    // LEFT sensor sees dark:
+    else if(SensorValue(LineFollow3) > THRESHOLD)
+    {
+      // counter-steer left:
+      motor[LMotor] = 0;
+      motor[RMotor] = speed;
+    }
+    else
     {
     	motor[LMotor] = 0;
     	motor[RMotor] = 0;
-    }
-
-   //Claw
-    if(vexRT[Btn8L] == 1)
-    {
-    	motor[Claw] = 47;
-    }
-    else if(vexRT[Btn8R] == 1)
-    {
-    	motor[Claw] = -47;
-    }
-
-    else
-    {
-    	motor[Claw] = 0;
-    }
-
-    // craneArm
-    if(vexRT[Btn8U] == 1)
-    {
-    	motor[CraneArm] = -50;
-    }
-    else if(vexRT[Btn8D] == 1)
-    {
-    	motor[CraneArm] = 50;
-  	}
-    else
-    {
-    	motor[CraneArm] = 0;
+    	break;
     }
   }
 }
 
-task emergencys_stop(){
-	clearDebugStream();
+
+//---------------------------------------------------------------------------------------------------
+
+//-------------------------------Verk4---------------------------------------------------------------
+task joydrive()
+{
+	if(abs(vexRT[Ch2]) > THRESHOLD /*THRESHOLD stoppar hljod*/)
+	{
+			motor[RMotor] = vexRT[Ch2];
+	}
+	else
+	{
+		motor[RMotor] = 0;
+	}
+
+	if(abs(vexRT[Ch3]) > THRESHOLD)
+	{
+ 	 		motor[LMotor] = vexRT[Ch3];
+ 	}
+ 	else
+	{
+		motor[LMotor] = 0;
+	}
+
+  if(sensorValue[FruntButton] == 1)
+  {
+  	motor[LMotor] = 0;
+  	motor[RMotor] = 0;
+  }
+
+ //Claw
+  if(vexRT[Btn8L] == 1)
+  {
+  	motor[Claw] = 47;
+  }
+  else if(vexRT[Btn8R] == 1)
+  {
+  	motor[Claw] = -47;
+  }
+
+  else
+  {
+  	motor[Claw] = 0;
+  }
+
+  // craneArm
+  if(vexRT[Btn8U] == 1)
+  {
+  	motor[CraneArm] = -50;
+  }
+  else if(vexRT[Btn8D] == 1)
+  {
+  	motor[CraneArm] = 50;
+	}
+  else
+  {
+  	motor[CraneArm] = 0;
+  }
+}
+
+
+/*task emergencys_stop(){
 	while(true){
 		if (SensorValue(FruntButton) == 1 || vexRT[Btn7D] == 1){
 			suspendTask(main);
 			stopMotors();
 		}
 	}
-}
+}*/
 
 task startBot(){
 	while(true){
