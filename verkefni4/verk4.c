@@ -49,7 +49,7 @@ task main()
 	StartTask(startBot);
 	while(true)
 	{
-		//if (vexRT[Btn7L] == 1){
+		if (vexRT[Btn7L] == 1){
 			while(true){
 				if(SensorValue(LightSensor) < 900){
 					if(SensorValue(SonarCM) > 30 || SensorValue(SonarCM) == -1)		// Loop while robot's Ultrasonic sensor is further than 20 inches away from an object
@@ -71,7 +71,7 @@ task main()
 					motor[LMotor] = 0;
 				}
 			}
-		//}
+		}
 	}
 }
 
