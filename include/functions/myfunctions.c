@@ -1,6 +1,9 @@
 //-------------------------------Verk5---------------------------------------------------------------
 void drive_line(int speed)
 {
+	 wait1Msec(1000);
+
+  int THRESHOLD = 2875
 	while(true)
 	{
 		// CENTER sensor sees dark:
@@ -11,7 +14,7 @@ void drive_line(int speed)
       motor[RMotor] = speed;
     }
  		// RIGHT sensor sees dark:
-    else if(SensorValue(LineFollow1) > THRESHOLD)
+    else if(SensorValue(LineFollow3) > THRESHOLD)
     {
       // counter-steer right:
       motor[LMotor] = speed;
@@ -19,18 +22,13 @@ void drive_line(int speed)
     }
 
     // LEFT sensor sees dark:
-    else if(SensorValue(LineFollow3) > THRESHOLD)
+    else if(SensorValue(LineFollow1) > THRESHOLD)
     {
       // counter-steer left:
       motor[LMotor] = 0;
       motor[RMotor] = speed;
     }
-    else
-    {
-    	motor[LMotor] = 0;
-    	motor[RMotor] = 0;
-    	break;
-    }
+
   }
 }
 

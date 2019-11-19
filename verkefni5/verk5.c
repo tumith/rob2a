@@ -16,7 +16,7 @@
 
 
 /*----------------------------------------------------------------------------------------------------*\
-|*                                    - LineSensor / LineFollower -                          					*|
+|*                                    - LineSensor / LineFollower -                          		  *|
 |*                                      ROBOTC on VEX 2.0 Cortex                                      *|
 |*    Thetta er programm til ad elta linu en ef thad er ekki sed linuna leingur tha er stopad.        *|
 |*                                                                                                    *|
@@ -24,17 +24,17 @@
 |*                                        ROBOT CONFIGURATION                                         *|
 |*    NOTES:                                                                                          *|
 |*   1) Robot leitar af linu ef hann ser linu tha eltir hann linuna en ef hann ser einga linu tha er  *|
-|*      hann kjur og bidur eftir thvi ad sja linu.																								    *|
-|*   2) Thegar robotin ser linu eltir hann linuna thangad til hann ser hana ekki leignur.					    *|
+|*      hann kjur og bidur eftir thvi ad sja linu.									   			      *|
+|*   2) Thegar robotin ser linu eltir hann linuna thangad til hann ser hana ekki leignur.			  *|
 |*                                                                                                    *|
 |*                                                                                                    *|
 |*    MOTORS & SENSORS:                                                                               *|
 |*    [I/O Port]             [Name]              [Type]              [Description]                    *|
 |*    Motor - Port 10        RMotor            tmotorVex393           Right motor                     *|
 |*    Motor - Port 1         LMotor            tmotorVex393           Left motor                      *|
-|*    Sensor - in2           LineFollow1  		 sensorLineFollower     Line detector										*|
-|*    Sensor - in3           LineFollow2  		 sensorLineFollower     Line detector										*|
-|*    Sensor - in4           LineFollow3  		 sensorLineFollower     Line detector										*|
+|*    Sensor - in2           LineFollow1  		 sensorLineFollower     Line detector				  *|
+|*    Sensor - in3           LineFollow2  		 sensorLineFollower     Line detector				  *|
+|*    Sensor - in4           LineFollow3  		 sensorLineFollower     Line detector				  *|
 \*----------------------------------------------------------------------------------------------------*/
 
 #include "..\include\header\movingForwardHeder.h"
