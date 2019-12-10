@@ -1,20 +1,19 @@
-//-------------------------------Verk5---------------------------------------------------------------
-void drive_line(int speed)
+//-------------------------------Verk6---------------------------------------------------------------
+void pick_up_glass(int speed)
 {
-	 wait1Msec(1000);
+	wait1Msec(1000);
 
-  int THRESHOLD = 2875
 	while(true)
 	{
 		// CENTER sensor sees dark:
-    if(SensorValue(LineFollow2) > THRESHOLD)
+    if(SensorValue(LineFollow2) > Line_THRESHOLD)
     {
       // go straight
-      motor[LMotor] = speed;
-      motor[RMotor] = speed;
+      motor[LMotor] = 127;
+      motor[RMotor] = 127;
     }
  		// RIGHT sensor sees dark:
-    else if(SensorValue(LineFollow3) > THRESHOLD)
+    if(SensorValue(LineFollow3) > Line_THRESHOLD)
     {
       // counter-steer right:
       motor[LMotor] = speed;
@@ -22,7 +21,101 @@ void drive_line(int speed)
     }
 
     // LEFT sensor sees dark:
-    else if(SensorValue(LineFollow1) > THRESHOLD)
+    if(SensorValue(LineFollow1) > Line_THRESHOLD)
+    {
+      // counter-steer left:
+      motor[LMotor] = 0;
+      motor[RMotor] = speed;
+    }
+    if(SensorValue(LineFollow1) < Line_THRESHOLD && SensorValue(LineFollow2) < Line_THRESHOLD && SensorValue(LineFollow3) < Line_THRESHOLD)
+  {
+  	motor[LMotor] = 0;
+    motor[RMotor] = 0;
+  	break;
+  }
+  }
+}
+
+
+
+/*void find(int speed)
+{
+	wait1Msec(1000);
+
+  int THRESHOLD = 2875;
+	// RIGHT sensor sees dark:
+  if(SensorValue(LineFollow3) > THRESHOLD)
+  {
+    // counter-steer right:
+    motor[LMotor] = speed;
+    motor[RMotor] = 0;
+  }
+
+  // LEFT sensor sees dark:
+  else if(SensorValue(LineFollow1) > THRESHOLD)
+  {
+    // counter-steer left:
+    motor[LMotor] = 0;
+    motor[RMotor] = speed;
+  }
+}
+
+
+void driving_back_forw(bool b_f)
+{
+  SensorValue[REncoder] = 0;    // Clear the encoders for
+  SensorValue[LEncoder]  = 0;    // consistancy and accuracy.
+	find(63);
+	  while(abs(SensorValue[REncoder]) < BASE_DIST)
+	  {
+	  	int dir =(b_f)?(1):(-1);
+	    motor[RMotor] = dir*63;
+	    motor[LMotor]  = dir*63;
+	  }
+  motor[RMotor] = 0;
+  motor[LMotor]  = 0;
+}
+
+ void Turn1(int deg,bool right_left)
+{
+  SensorValue[REncoder] = 0;
+  SensorValue[LEncoder]  = 0;
+	int dir =(right_left)?(1):(-1);
+  while(abs(SensorValue[REncoder]) < (deg * BASE_ROTATION) && abs(SensorValue[LEncoder]) < (deg * BASE_ROTATION))
+  {
+    motor[RMotor] = dir*63;
+    motor[LMotor]  = dir*-63;
+  }
+  motor[RMotor] = 0;
+  motor[LMotor]  = 0; */
+
+
+//---------------------------------------------------------------------------------------------------
+
+//-------------------------------Verk5---------------------------------------------------------------
+void drive_line(int speed)
+{
+	wait1Msec(1000);
+	int dig= -1
+	while(true)
+	{
+		// CENTER sensor sees dark:
+    if((SensorValue(LineFollow2)) > Line_THRESHOLD)
+    {
+      // go straight
+      motor[LMotor] = speed;
+      motor[RMotor] = speed;
+    }
+ 		// RIGHT sensor sees dark:
+    else if((SensorValue(LineFollow3)) > Line_THRESHOLD)
+    {
+      // counter-steer right:
+      motor[LMotor] = speed;
+      motor[RMotor] = 0;
+    }
+
+    // LEFT sensor sees dark:
+    else if((SensorValue(LineFollow1)) > Line_THRESHOLD)
     {
       // counter-steer left:
       motor[LMotor] = 0;
@@ -56,7 +149,7 @@ task joydrive()
 		motor[LMotor] = 0;
 	}
 
-  if(sensorValue[FruntButton] == 1)
+  if(SensorValue[FruntButton] == 1)
   {
   	motor[LMotor] = 0;
   	motor[RMotor] = 0;
@@ -90,10 +183,14 @@ task joydrive()
   {
   	motor[CraneArm] = 0;
   }
+  if (vexRT[Btn7L] == 1){
+			stopMotors();
+		  suspendTask(joydrive);
+	}
 }
 
 
-/*task emergencys_stop(){
+/*task emergency_stop(){
 	while(true){
 		if (SensorValue(FruntButton) == 1 || vexRT[Btn7D] == 1){
 			suspendTask(main);
@@ -104,7 +201,7 @@ task joydrive()
 
 task startBot(){
 	while(true){
-		if (vexRT[BTn7U] == 1){
+		if (vexRT[Btn7U] == 1){
 			StartTask(main);
 		}
 	}

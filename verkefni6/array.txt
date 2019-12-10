@@ -1,0 +1,17 @@
+flfffrfpbrfffrfdbrfflfpblffrfdbrfrfpbrfrfdblflfpblflfd Nr.54
+
+f  fff  f  b  fff  f  b  ff  f  b  ff  f  b  f  f  b  f  f  b  f  f  b  f  f  
+1,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1 Nr.24
+
+fffffbffffbfffbfffbffbffbffbff Nr.30
+1,1,1,1,1,0,1,1,1,1,0,1,1,1,0,1,1,1,0,1,1,0,1,1,0,1,1,0,1,1
+
+
+
+pdpdpdpd Nr.8
+1,0,1,0,1,0,1,0
+
+
+
+lrrrrllrrrrrllll Nr.16
+1,0,0,0,0,1,1,0,0,0,0,0,1,1,1,1
